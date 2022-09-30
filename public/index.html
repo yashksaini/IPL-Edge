@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/icon-512x512.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="IPL EDGE" content="Play your IPL match with best team" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>IPL EDGE</title>
+  </head>
+  <body>
+    <div id="toggle"><i class="fas fa-adjust"></i></div>
+    <div id="root" class="darkMode"></div>
+    <script>
+      const root = document.getElementById("root");
+      const toggle = document.getElementById("toggle");
+      let dark = true;
+      toggle.addEventListener("click", () => {
+        dark = !dark;
+        if (dark) {
+          root.className = "darkMode";
+        } else {
+          root.className = "lightMode";
+        }
+      });
+    </script>
+  </body>
+</html>

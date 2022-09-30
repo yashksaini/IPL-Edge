@@ -1,0 +1,110 @@
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: var(--ldark);
+  margin-bottom: 0px;
+  font-weight: 100;
+}
+.scoreboard img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.scoreShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.vsShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.vsShow span {
+  color: var(--grey);
+  font-size: 24px;
+  font-weight: 500;
+}
+.score {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 24px;
+}
+.overs {
+  width: 120px;
+  color: var(--dark5);
+  display: flex;
+  font-size: 24px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.crr {
+  width: 120px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: var(--dark5);
+  font-size: 20px;
+}
+.crr span {
+  margin-left: 15px;
+}
+
+.tossShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  color: var(--text);
+  width: 100%;
+}
+.tossShow b {
+  margin: 0 10px;
+  color: var(--green);
+}
+
+@media only screen and (max-width: 992px) {
+  .scoreboard {
+    flex-direction: column;
+    height: auto;
+  }
+  .vsShow {
+    height: 70px;
+    border-bottom: 1px solid var(--dark);
+  }
+  .scoreShow {
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark);
+  }
+  .score {
+    width: 82px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .overs {
+    width: 98px;
+    font-size: 20px;
+  }
+  .crr {
+    width: 98px;
+    padding-right: 10px;
+  }
+  .crr span {
+    margin-left: 10px;
+  }
+  .tossShow {
+    margin: 10px 0;
+  }
+}

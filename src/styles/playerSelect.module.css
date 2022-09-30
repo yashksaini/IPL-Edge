@@ -1,0 +1,313 @@
+.topBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topBox div {
+  font-size: 20px;
+  background-color: var(--ldark);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: var(--white);
+}
+.topBox img {
+  width: 48px;
+  aspect-ratio: 1;
+}
+.teamSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+.bigCard {
+  position: relative;
+  width: 480px;
+  height: 420px;
+  margin: 0 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: var(--ldark);
+  overflow-y: auto;
+}
+.topBar {
+  position: sticky;
+  top: -8px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  background-color: var(--dark);
+  border-radius: 6px;
+  z-index: 10;
+}
+.topName {
+  margin: 0 12px;
+  color: var(--head);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.danger {
+  margin: 0 12px;
+  color: var(--red);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topName img {
+  width: 25px;
+  aspect-ratio: 1;
+  margin-right: 10px;
+}
+.topName p {
+  font-weight: 300;
+}
+
+.power {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.power div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  margin: 0 4px;
+  color: var(--text);
+}
+.eachBar {
+  height: 30px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark2);
+  border-radius: 4px;
+  transition: all 0.5s;
+  position: relative;
+
+  animation: fadeIn 0.5s 0s 1 forwards;
+}
+.selectBar {
+  height: 30px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark3);
+  border-radius: 4px;
+  transition: all 0.5s;
+  position: relative;
+}
+.selectBar:hover {
+  cursor: pointer;
+}
+.eachBar:hover {
+  cursor: pointer;
+  background-color: var(--dark);
+  transition: all 0.5s;
+}
+.greenDot {
+  color: var(--green);
+}
+/* width */
+.bigCard::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.bigCard::-webkit-scrollbar-track {
+  background: var(--grey);
+  border-radius: 0 10px 10px 0;
+}
+/* Handle */
+.bigCard::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 0 10px 10px 0;
+}
+/* Handle on hover */
+.bigCard::-webkit-scrollbar-thumb:hover {
+  background: var(--darkblue);
+}
+.switch {
+  font-size: 24px;
+  margin: 0 16px;
+  padding: 12px;
+  color: var(--white);
+}
+.switch:hover {
+  cursor: pointer;
+  color: var(--green);
+}
+.playBtn {
+  width: 266px;
+  height: 50px;
+  margin: 24px 0;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 24px;
+  border-radius: 200px;
+  z-index: 2;
+  opacity: 0;
+  position: relative;
+  animation: fadeDown 1s 1s 1 forwards;
+}
+.playBtn:disabled,
+.playBtn:disabled:hover {
+  background-color: rgb(88, 88, 88);
+  color: var(--ldark);
+  cursor: unset !important;
+  box-shadow: none;
+}
+.playBtn::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-radius: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  transition: all 0.2s;
+  top: 50%;
+  left: 50%;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--darkblue);
+}
+.playBtn:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+.playBtn:hover::after {
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  height: 50px;
+  border-radius: 100px;
+  width: 100%;
+  transition: all 0.6s;
+}
+.playBtn:disabled:hover::after {
+  display: none;
+}
+.teamBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 992px) {
+  .bigCard {
+    width: 166px;
+    height: 385px;
+    margin: 0 4px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .topBar {
+    top: -4px;
+    font-size: 11px;
+    height: 28px;
+    padding: 0 8px;
+    border-radius: 2px;
+  }
+  .eachBar {
+    font-size: 10px;
+    height: 28px;
+  }
+  .selectBar {
+    font-size: 10px;
+    height: 28px;
+  }
+  .topName {
+    margin: 0 0 0 4px;
+  }
+  .danger {
+    margin: 0 0 0 4px;
+  }
+  .topName img {
+    width: 12px;
+    margin-right: 6px;
+  }
+  .power div {
+    width: 16px;
+    font-size: 9px;
+    margin: 0 2px;
+  }
+  .playBtn {
+    margin: 8px 0;
+  }
+}
+/* Animations */
+@keyframes spread {
+  from {
+    opacity: 1;
+    letter-spacing: -20px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+@keyframes splash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.hide {
+  display: none !important;
+}

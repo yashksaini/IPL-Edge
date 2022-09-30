@@ -1,0 +1,185 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.match {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.match img {
+  width: 80px;
+  aspect-ratio: 1;
+  margin: 0 20px;
+  opacity: 0;
+  animation: fadeDown 1s 1s 1 forwards;
+}
+.match p {
+  color: var(--white);
+}
+.box h1 {
+  font-size: 36px;
+  color: var(--head);
+  opacity: 0;
+  margin: 16px 0;
+  animation: fadeIn 1s 1s 1 forwards;
+}
+.tossWin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: zoomIn 1s 2s 1 forwards;
+}
+.tossWin img {
+  margin: 16px 0;
+  width: 120px;
+  aspect-ratio: 1;
+}
+.tossWin p {
+  font-size: 20px;
+  color: var(--text);
+}
+.chooseType {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s 2s 1 forwards;
+}
+.chooseType div {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 48px 24px;
+}
+.chooseType img {
+  width: 120px;
+  height: 120px;
+}
+.chooseType img:hover {
+  cursor: pointer;
+}
+.activeTeam::after {
+  content: "";
+  width: 140px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  border-radius: 500px;
+  border: solid 5px #fff;
+  animation: zoomIn 0.5s 0s 1 forwards;
+}
+.playBtn {
+  width: 266px;
+  height: 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 24px;
+  border-radius: 200px;
+  z-index: 2;
+  opacity: 0;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s 1s 1 forwards;
+}
+.playBtn::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-radius: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  transition: all 0.2s;
+  top: 50%;
+  left: 50%;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--darkblue);
+}
+.playBtn:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+.playBtn:hover::after {
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  height: 50px;
+  border-radius: 100px;
+  width: 100%;
+  transition: all 0.6s;
+}
+/* Animations */
+@keyframes spread {
+  from {
+    opacity: 1;
+    letter-spacing: -20px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+@keyframes splash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,217 @@
+.modal {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000000cc;
+  z-index: 10000;
+  opacity: 0;
+  animation: fadeDown 1s 0.5s 1 forwards;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* display: none; */
+}
+.modalBody {
+  background-color: var(--dark);
+  width: 540px;
+  height: auto;
+  margin: 24px auto;
+  padding: 12px;
+  border-radius: 10px;
+}
+.allPlayers {
+  width: 100%;
+  height: 36px;
+  color: var(--text);
+  border-radius: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  background-color: var(--dark);
+  border-bottom: 1px solid var(--dark3);
+}
+.allPlayers1 {
+  width: 100%;
+  height: 36px;
+  color: var(--text);
+  border-radius: 0px;
+  border-bottom: 1px solid var(--dark3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  background-color: var(--dark);
+}
+
+.allPlayers1 span {
+  width: 60px;
+  text-align: center;
+}
+.allPlayers1 span:first-child {
+  width: 200px !important;
+  text-align: left !important;
+  margin-left: 10px;
+}
+.allPlayers1:hover {
+  cursor: pointer;
+  background-color: var(--dark2);
+}
+.allPlayers:hover {
+  cursor: pointer;
+  background-color: var(--dark2);
+}
+.selPlayer {
+  width: 100%;
+  height: 36px;
+  color: var(--text);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  background-color: var(--darkblue);
+}
+.allPlayers:focus-within {
+  opacity: 0;
+  animation: fadeDown 0.5s 0s 1 forwards;
+}
+.selPlayer span {
+  margin: 0 16px;
+}
+.allPlayers span {
+  margin: 0 16px;
+}
+
+.allPlayers img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.allPlayers span:last-child {
+  color: var(--green);
+  font-weight: 500;
+}
+.hide {
+  display: none !important;
+}
+.next {
+  width: 180px;
+  height: 30px;
+  margin-left: calc(50% - 90px);
+  border: none;
+  background-color: var(--blue);
+  color: var(--text);
+}
+
+.next:hover {
+  cursor: pointer;
+}
+.next:disabled {
+  background-color: var(--dark3);
+  color: var(--dark2);
+}
+.line {
+  width: 540px;
+  height: 2px;
+  background-color: var(--dark3);
+}
+.topName {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topName img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.topName span {
+  margin: 0 12px;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--dark5);
+}
+@media only screen and (max-width: 786px) {
+  .modalBody {
+    width: 340px;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 24px auto;
+  }
+  .allPlayers {
+    height: 24px;
+  }
+  .allPlayers1 {
+    height: 24px;
+  }
+  .next {
+    width: 120px;
+    height: 30px;
+    margin-left: calc(50% - 60px);
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .line {
+    width: 340px;
+  }
+}
+@keyframes spread {
+  from {
+    opacity: 1;
+    letter-spacing: -20px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+@keyframes splash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

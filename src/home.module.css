@@ -1,0 +1,82 @@
+.title {
+  width: 100%;
+  height: 90px;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: spread 2s 1s 1 forwards;
+}
+.title span {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}
+.progress {
+  /* margin: 16px 0; */
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s 0s 1 forwards;
+}
+.progress div {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 100px;
+  background-color: var(--white);
+}
+.progress span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+}
+.done {
+  opacity: 0;
+  animation: splash 0.2s 0s 1 forwards;
+}
+
+/* Animations */
+@keyframes spread {
+  from {
+    opacity: 1;
+    letter-spacing: -20px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+@keyframes splash {
+  from {
+    opacity: 0;
+    background-color: var(--white);
+  }
+  to {
+    opacity: 1;
+    background-color: var(--green);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.hide {
+  display: none;
+}

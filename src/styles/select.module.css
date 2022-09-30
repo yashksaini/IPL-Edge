@@ -1,0 +1,310 @@
+.selectTeam {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.selectTeam p {
+  font-size: 48px;
+  color: var(--white);
+  font-weight: 700;
+  margin: 0 10px;
+  opacity: 0;
+  animation: zoomOut 1s 2.5s 1 forwards;
+}
+.selectTeam div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 16px 0;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn 0.5s 2s 1 forwards;
+}
+.selectTeam div img {
+  width: 120px;
+  aspect-ratio: 1;
+  border-radius: 500px;
+  z-index: 3;
+  opacity: 0;
+  animation: zoomIn 1s 2.5s 1 forwards;
+}
+.playBtn {
+  width: 266px;
+  height: 50px;
+  margin: 24px 0;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 24px;
+  border-radius: 200px;
+  z-index: 2;
+  opacity: 0;
+  position: relative;
+  animation: fadeDown 1s 4s 1 forwards;
+}
+.playBtn:disabled,
+.playBtn:disabled:hover {
+  background-color: rgb(88, 88, 88);
+  color: var(--ldark);
+  cursor: unset !important;
+  box-shadow: none;
+}
+.playBtn::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-radius: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  transition: all 0.2s;
+  top: 50%;
+  left: 50%;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--darkblue);
+}
+.playBtn:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+.playBtn:hover::after {
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  height: 50px;
+  border-radius: 100px;
+  width: 100%;
+  transition: all 0.6s;
+}
+.playBtn:disabled:hover::after {
+  display: none;
+}
+.selectBtn {
+  z-index: 2;
+  width: 180px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 24px;
+  margin-left: -24px;
+  text-transform: uppercase;
+  color: var(--text);
+  background-color: var(--ldark);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  opacity: 0;
+  animation: fadeIn 1s 3s 1 forwards;
+  position: relative;
+}
+.selectBtn::after {
+  content: "";
+  width: 0px;
+  height: 48px;
+  border-radius: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--blue);
+}
+.selectBtn:hover {
+  cursor: pointer;
+  color: var(--white);
+  transition: all 0.5s;
+}
+.selectBtn:hover::after {
+  cursor: pointer;
+  width: 180px;
+  transition: all 0.8s;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000000;
+  background-color: rgba(0, 0, 0, 0.63);
+  overflow-y: auto;
+}
+.modalHead {
+  width: 60%;
+  border-radius: 10px;
+  padding: 12px 0;
+  margin: 24px auto 0 auto;
+  background-color: #121212;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  animation: fadeDown 0.5s 0s 1 forwards;
+}
+.modalHead h1 {
+  font-size: 28px;
+  margin: 0 20px;
+  color: var(--text);
+}
+.modalHead i {
+  font-size: 28px;
+  margin: 0 20px;
+  color: var(--text);
+}
+.modalHead i:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+.modalBody {
+  width: 60%;
+  border-radius: 20px;
+  padding: 24px 0;
+  margin: 24px auto;
+  background-color: #121212;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  animation: fadeDown 0.5s 0.5s 1 forwards;
+}
+.modalBody div {
+  width: 120px;
+  margin: 16px;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: 200px;
+  transition: all 0.5s;
+  opacity: 0;
+  animation: zoomIn 1s 1s 1 forwards;
+}
+.modalBody div:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.modalBody div img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.activeTeam::after {
+  content: "";
+  width: 140px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  border-radius: 500px;
+  border: solid 5px #fff;
+  animation: zoomIn 0.5s 0s 1 forwards;
+}
+@media only screen and (max-width: 992px) {
+  .modalHead {
+    width: 90%;
+    border-radius: 4px;
+    padding: 12px 0;
+    margin: 12px auto 0 auto;
+  }
+  .modalHead h1 {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .modalHead i {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+  .modalBody {
+    width: 90%;
+    border-radius: 4px;
+    padding: 12px 0;
+    margin: 12px auto;
+  }
+  .modalBody div {
+    width: 80px;
+    margin: 6px;
+  }
+
+  .activeTeam::after {
+    width: 90px;
+    top: -7px;
+    left: -7px;
+    border: solid 2px #fff;
+  }
+}
+/* Animations */
+@keyframes spread {
+  from {
+    opacity: 1;
+    letter-spacing: -20px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+@keyframes splash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.hide {
+  display: none;
+}

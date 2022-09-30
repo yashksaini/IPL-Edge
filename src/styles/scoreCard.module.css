@@ -1,0 +1,502 @@
+.modal {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--dark);
+  z-index: 10000;
+  opacity: 0;
+  animation: fadeDown 1s 0.5s 1 forwards;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* display: none; */
+}
+.modalBody {
+  background-color: var(--dark);
+  width: 540px;
+  height: auto;
+  margin: 24px auto;
+  padding: 12px;
+  border-radius: 10px;
+}
+.allPlayers {
+  width: 100%;
+  height: 36px;
+  color: var(--text);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  font-weight: 300;
+  background-color: var(--ldark);
+}
+
+.hide {
+  display: none !important;
+}
+.closeBtn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  z-index: 100000;
+  aspect-ratio: 1;
+  border-radius: 100px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.closeBtn:hover {
+  cursor: pointer;
+}
+.line {
+  width: 540px;
+  height: 2px;
+  background-color: var(--dark3);
+}
+/* For Card */
+.batScorecard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text);
+  background-color: var(--dark2);
+  font-weight: 100;
+  margin: 12px 0;
+}
+.card {
+  width: 540px;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 1px 0;
+  background-color: var(--dark);
+  animation: fadeIn 1s 0s 1 forwards;
+}
+.card img {
+  width: 50px;
+  height: 50px;
+  margin: 0 12px;
+}
+.cardName {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+}
+.cardName p {
+  margin-left: 12px;
+  font-weight: 500;
+}
+.outBy {
+  font-weight: 300;
+  font-size: 12px;
+  display: block;
+  margin: 4px 0;
+  color: var(--wick);
+}
+.playing {
+  color: var(--green);
+  font-weight: 300;
+  font-size: 12px;
+  display: block;
+  margin: 4px 0;
+}
+.topScore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: var(--dark);
+}
+.topScore div {
+  margin: 0 12px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.separate {
+  height: 32px;
+  background-color: var(--dark);
+  width: 100%;
+}
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+.details div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.details div span {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.line {
+  width: 540px;
+  height: 2px;
+  background-color: var(--dark3);
+}
+.runs {
+  letter-spacing: 1px;
+  width: 130px;
+}
+.sr {
+  width: 130px;
+  color: var(--green);
+}
+.six {
+  color: var(--six);
+  width: 70px;
+}
+.four {
+  color: var(--four);
+  width: 70px;
+}
+.ov {
+  width: 130px;
+  color: var(--green);
+}
+.wick {
+  width: 70px;
+  color: var(--wick);
+}
+.eco {
+  width: 70px;
+  color: var(--four);
+}
+.cardActive {
+  width: 540px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 6px 0;
+  border-radius: 8px;
+  background-color: var(--dark);
+  animation: fadeDown 1s 0s 1 forwards;
+}
+.cardActive div {
+  font-weight: 500;
+}
+.leftPlayers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--dark);
+}
+.leftPlayers span {
+  white-space: nowrap;
+  margin: 6px;
+  padding: 6px 8px;
+  background-color: var(--ldark);
+  font-size: 14px;
+  border-radius: 4px;
+}
+.changeOvInns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.changeOvInns div {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--dark6);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 8px;
+}
+.changeOvInns div:hover {
+  cursor: pointer;
+  background-color: var(--ldark);
+}
+.showOvers h1 {
+  text-align: center;
+  color: var(--dark5);
+  font-size: 24px;
+}
+.eachOver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 16px 0;
+  color: var(--dark5);
+}
+.rowLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.colRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background-color: var(--ldark);
+}
+.colRow:first-child {
+  width: 100px;
+  border-right: 1px solid var(--dark);
+  border-bottom: 1px solid var(--dark);
+}
+.colRow:last-child {
+  width: 240px;
+  border-bottom: 1px solid var(--dark);
+}
+.norun {
+  background-color: var(--dark2);
+  color: var(--white);
+}
+.single {
+  background-color: var(--dark3);
+  color: var(--text);
+}
+.out {
+  background-color: var(--wick);
+  color: var(--text);
+}
+.four1 {
+  background-color: var(--four);
+  color: var(--white);
+}
+.six1 {
+  background-color: var(--six);
+  color: var(--white);
+}
+.colRow div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin: 3px 6px;
+  border-radius: 120px;
+}
+.comment {
+  background-color: var(--ldark);
+  padding: 2px 8px;
+  width: 480px;
+  max-width: calc(100% - 16px);
+  color: var(--dark5);
+  margin: 4px 0;
+}
+.topSide {
+  width: 100%;
+  margin: 2px 0;
+  padding: 0px 0 3px 0;
+}
+.topSide span:first-child {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 400;
+  margin-right: 16px;
+}
+.topSide span:last-child {
+  width: 30px;
+  height: 30px;
+  border-radius: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.bottomSide span:first-child {
+  display: block;
+  font-size: 18px;
+  margin: 4px 0;
+  color: var(--dark7);
+}
+.bottomSide span:last-child {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+@media only screen and (max-width: 786px) {
+  .bottomSide span:first-child {
+    font-size: 12px;
+  }
+  .bottomSide span:last-child {
+    font-size: 12px;
+  }
+  .topScore {
+    height: 40px;
+  }
+  .topScore div {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .batScorecard {
+    margin-bottom: 12px;
+  }
+  .card {
+    width: 340px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .cardName {
+    width: 92px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .cardName p {
+    margin-left: 8px;
+    letter-spacing: unset;
+    font-weight: 300;
+  }
+  .cardName span {
+    font-size: 10px;
+  }
+  .details {
+    width: 248px;
+  }
+  .details div span {
+    font-size: 12px;
+  }
+  .line {
+    width: 340px;
+  }
+  .runs {
+    width: 80px;
+  }
+  .sr {
+    width: 80px;
+  }
+  .six {
+    width: 38px;
+  }
+  .four {
+    width: 38px;
+  }
+  .ov {
+    width: 82px;
+  }
+  .wick {
+    width: 38px;
+  }
+  .eco {
+    width: 38px;
+  }
+  .cardActive {
+    width: 340px;
+    height: 30px;
+    font-size: 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+  }
+}
+@media only screen and (max-width: 786px) {
+  .modalBody {
+    width: 340px;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 24px auto;
+  }
+  .allPlayers {
+    height: 24px;
+  }
+  .allPlayers1 {
+    height: 24px;
+  }
+  .next {
+    width: 120px;
+    height: 30px;
+    margin-left: calc(50% - 60px);
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .line {
+    width: 340px;
+  }
+  .leftPlayers span {
+    font-weight: 300 !important;
+    padding: 4px 6px;
+    font-size: 12px;
+    border-radius: 2px;
+  }
+}
+@keyframes spread {
+  from {
+    opacity: 1;
+    letter-spacing: -20px;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+}
+@keyframes splash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
